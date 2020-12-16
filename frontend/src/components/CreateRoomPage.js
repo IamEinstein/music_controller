@@ -45,10 +45,7 @@ export default class CreateRoomPage extends Component {
       }),
     };
     fetch("/api/create-room", requestOptions)
-      .then((response) => {
-        response.json;
-        console.log("response" + response);
-      })
+      .then((response) => response.json())
       .then((data) => console.log(data));
   }
   render() {

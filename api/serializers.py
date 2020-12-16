@@ -7,12 +7,10 @@ class RoomSerializer(serializers.ModelSerializer):
         model = Room
         fields = ('id', 'code', 'host', 'guest_can_pause',
                   'votes_to_skip', 'created_at')
+#  POST API URL
 
 
 class CreateRoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
-        # * Fields that are meant to be sent with the POST REQUEST
-        fields = ('guest_can_pause',
-                  'votes_to_skip',
-                  )
+        fields = ('guest_can_pause', 'votes_to_skip')
